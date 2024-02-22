@@ -6,11 +6,16 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
-  <body style="background-color: #111010dd">
+  <body style="background-color: #8f7fb6dd">
+      <nav class="navbar bg-body-secondary">
+            <div class="container-fluid d-flex justify-content-center">
+                <a class="navbar-brand">MYPERPUS</a>
+            </div>
+        </nav>
 
     <div class="container">
         <div class="card position-absolute top-50 start-50 translate-middle rounded" style="width: 25rem; height: 19rem; border-radius: 17px">
-            <div class="card-body" style="background-color: #f3f3f3;">
+            <div class="card-body" style="background-color:#fffffffb;">
               <form>
                 <div class="mb-3">
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
@@ -22,7 +27,7 @@
                   <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 <div class="d-flex justify-content-center mb-3">                   
-                    <a href="{{url('login')}}" class="btn btn-secondary" style="border-radius: 15px; width: 100;">Daftar</a>
+                    <a href="{{url('login')}}" class="btn btn-primary " style="border-radius: 15px; width: 100;">Daftar</a>
                 </div>
               </form>
             </div>

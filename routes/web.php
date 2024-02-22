@@ -25,6 +25,10 @@ Route::get('/login/dashboard', function () {
     return view('index');
 });
 
+Route::get('/login/dashboard/kategori_buku', function () {
+    return view('kategoribuku.kategori_buku');
+});
+
 Route::get('/register', function () {
     return view('register');
-});     
+});   
