@@ -79,7 +79,7 @@
                                 </li>
 
                                 <li class="submenu-item  ">
-                                    <a href="component-alert.html" class="submenu-link">User</a>
+                                    <a href="/login/dashboard/user" class="submenu-link">User</a>
 
                                 </li>
 
@@ -93,64 +93,7 @@
                 </div>
             </div>
         </div>
-        <div id="main">
-            <header class="mb-3">
-                <a href="#" class="burger-btn d-block d-xl-none">
-                    <i class="bi bi-justify fs-3"></i>
-                </a>
-            </header>
 
-            <div class="page-heading">
-                <h3>Profile</h3>
-            </div>
-           <!-- Button trigger modal -->
-           <div class="card" style="width: 18rem;">
-            <img src="{{ asset('buku_naruto.jpg') }}"  class="card-img-top" alt="..." >
-            <div class="card-body">
-                <h5>Naruto Shippuden</h5>
-            <p class="card-text">
-            Cerita dalam komik ini mengandung materi yang diperuntukan untuk pembaca remaja. Tidak dianjurkan untuk dibaca anak-anak di bawah umur.</p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Lihat
-            </button>
-            </div>
-            </div>
-           
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Deskripsi</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                <img src="{{ asset('buku_naruto.jpg') }}" class="card-img-top" alt="...">
-                Naruto merupakan salah satu manga paling terkenal dengan manga asli yang diadaptasi ke dalam spin-off, sekuel bentuk anime, manga, dan novel ringan yang seluruhnya populer. 
-                Manga asli Naruto pertama kali dibuat oleh Masashi Kishimoto pada tahun 1999. Sejak awal pembuatannya Naruto telah terjual lebih dari 250 juta volume. Cerita Naruto berkisah tentang Naruto Uzumaki saat ia pra-remaja dan remaja. Kisah ini menceritakan bagaimana kehidupan Naruto dalam mengejar cita-citanya menjadi Hokage, pemimpin desa Konoha.
-                
-                Sinopsis
-                Naruto mengalahkan Pain terakhir dan bertemu dengan Nagato, wujud asli Pain!! Dia menahan perasaan benci dan keinginan balas dendamnya untuk mendengarkan cerita masa lalu Nagato. 
-                Naruto yang sudah merasakan rantai kebencian dalam dunia shinobi, akhirnya mengeluarkan jawabannya!!
-
-                Judul: Naruto 48
-                Rating: Untuk Pembaca Remaja
-                Cerita & Ilustrasi: Masashi Kishimoto
-                Tebal: 192 halaman
-                Format: Soft Cover
-                Tanggal Terbit: 24 Mei 2010
-                Dimensi: 11 cm x 18 cm
-                Berat: 200 gram
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak Pinjam</button>
-                    <button type="button" class="btn btn-primary">Pinjam</button>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
     </div>
     <script src="{{ asset('dist/assets/static/js/components/dark.js') }}"></script>
     <script src="{{ asset('dist/assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>

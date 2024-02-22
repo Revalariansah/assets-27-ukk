@@ -12,10 +12,11 @@
                 <a class="navbar-brand">Kategori Buku</a>
             </div>
         </nav>
-        <table class="table mt-3">
+        <table class="table mt-3" >
         <thead>
+        <a class="btn btn-primary" href="#" role="button">Link</a>
             <tr>
-            <th scope="col">#</th>
+            <th scope="col">No</th>
             <th scope="col">Gambar</th>
             <th scope="col">Judul</th>
             <th scope="col">Penerbit</th>
@@ -23,21 +24,18 @@
             </tr>
         </thead>
         <tbody>
-        <div class="dropdown">
+        <div class="dropdown ">
             <tr>
             <th scope="row">1</th>
             <td> <img src="{{ asset('buku_naruto.jpg') }}" height="150" width="150" class="rounded" alt="..."></td>
-            <td>Otto</td>
-            <td>@mdo</td>
-             <td>  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+            <td>Naruto Shippuden</td>
+            <td>Masashi Kishimoto</td>
+             <td>  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-danger">Hapus</button>
+            <button type="button" class="btn btn-warning">Edit</button>
+            <button type="button" class="btn btn-success">Show</button>
             </div>
+        </div>
             </td>
             </tr>
         </tbody>

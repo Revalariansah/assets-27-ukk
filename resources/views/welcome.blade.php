@@ -23,6 +23,7 @@
     </nav>
     <div class="center-text" style="text-align: center;>
         <div class="card mb-3">
+
         <img src="{{ asset('buku.jpg') }}" class="card-img-top" alt="...">
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
