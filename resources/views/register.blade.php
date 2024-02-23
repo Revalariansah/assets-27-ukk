@@ -18,13 +18,16 @@
             <div class="card-body" style="background-color:#fffffffb;">
               <form>
                 <div class="mb-3">
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" name="name "class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
                 </div>
                 <div class="mb-3">
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@gmail.com">
                   </div>
                 <div class="mb-3">
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="email" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 <div class="d-flex justify-content-center mb-3">                   
                     <a href="{{url('login')}}" class="btn btn-primary " style="border-radius: 15px; width: 100;">Daftar</a>

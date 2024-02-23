@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{{ asset('dist/assets/compiled/css') }}/iconly.css">
 </head>
 
-<body>
+<body style=" background-color: #8f7fb6dd">
     <script src="assets/static/js/initTheme.js"></script>
     <div id="app">
         <div id="sidebar">
@@ -92,8 +92,418 @@
                     </ul>
                 </div>
             </div>
+            </div>
+        <div class="container-fluid d-flex ms-5" style="margin-left: 25rem; margin-top: 3rem;">
+        <h1 class="font-monospace" style="width: 15rem; margin-left: 25rem;">Rekomendasi Buku Untukmu</h1>
         </div>
-
+        <!-- content 1 -->
+        <div class="content">
+            <div class="row">
+                <div class="container-fluid d-flex ms-5" style="margin-left: 25rem; margin-top: 3rem;">
+                    <div class="card" style="width: 15rem; margin-left: 25rem;">
+                        <div class="card-content">
+                            <img class="card-img-bottom img-fluid" style="width: 18rem;" src="{{asset('buku_naruto.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>
+                                        Naruto
+                                    </h4>
+                                    <p class="card-text">
+                                        Masashi Kishimoto
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#naruto">
+                                    Read
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 16rem; margin-left: 2rem;">
+                        <div class="card-content">
+                            <img class="card-img-bottom img-fluid" style="width: 18rem;" src="{{asset('juki.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>
+                                        Si Juki : Seri Keroyokan
+                                    </h4>
+                                    <p class="card-text">
+                                        Faza Meonk
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#juki">
+                                    Read
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 16rem; margin-left: 2rem;">
+                        <div class="card-content">
+                            <img class="card-img-bottom img-fluid" style="width: 18rem;" src="{{asset('jujutsu.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>
+                                        Jujutsu
+                                    </h4>
+                                    <p class="card-text">
+                                        Gege Akutami
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#jujutsu">
+                                    Read
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem; margin-left: 2rem;">
+                        <div class="card-content">
+                            <img class="card-img-bottom img-fluid" style="width: 18rem;" src="{{asset('tokyo.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>
+                                        Tokyo Revengers
+                                    </h4>
+                                    <p class="card-text">
+                                        Ken Wakui
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tokyo">
+                                    Read
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem; margin-left: 2rem;">
+                        <div class="card-content">
+                            <img class="card-img-bottom img-fluid" style="width: 18rem;" src="{{asset('hero.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>
+                                        Boku No Hero
+                                    </h4>
+                                    <p class="card-text">
+                                        Kohei Horikoshi
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hero">
+                                    Read
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content 2 -->
+        <div class="content">
+            <div class="row">
+                <div class="container-fluid d-flex ms-5" style="margin-left: 25rem; margin-top: 3rem;">
+                    <div class="card" style="width: 15rem; margin-left: 25rem;">
+                        <div class="card-content">
+                            <img class="card-img-bottom img-fluid" style="width: 18rem;" src="{{asset('haikyu.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>
+                                        Haikyu
+                                    </h4>
+                                    <p class="card-text">
+                                        Haruichi Furudate
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#haikyu">
+                                    Read
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem; margin-left: 2rem;">
+                        <div class="card-content">
+                            <img class="card-img-bottom img-fluid" style="width: 18rem;" src="{{asset('conan.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>
+                                        Detektif Conan
+                                    </h4>
+                                    <p class="card-text">
+                                        Gosho Aoyama
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#conan">
+                                    Read
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 16rem; margin-left: 2rem;">
+                        <div class="card-content">
+                            <img class="card-img-bottom img-fluid" style="width: 18rem;" src="{{asset('boruto.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>
+                                        Boruto
+                                    </h4>
+                                    <p class="card-text">
+                                        Masashi Kishimoto
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#boruto">
+                                    Read
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem; margin-left: 2rem;">
+                        <div class="card-content">
+                            <img class="card-img-bottom img-fluid" style="width: 18rem;" src="{{asset('aot.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>
+                                        Attack On Titan
+                                    </h4>
+                                    <p class="card-text">
+                                        Hajime Isaya
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#aot">
+                                    Read
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 15rem; margin-left: 2rem;">
+                        <div class="card-content">
+                            <img class="card-img-bottom img-fluid" style="width: 18rem;" src="{{asset('blue.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>
+                                        Blue Lock
+                                    </h4>
+                                    <p class="card-text">
+                                        Muneyuki Kaneshiro
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#blue">
+                                    Read
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="naruto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Naruto Shippuden</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex">
+            <img class="card-img-bottom img-fluid" style="width: 15rem;" src="{{asset('buku_naruto.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+            <p class="card-text p-2 g-col-6">
+             Naruto adalah sebuah serial manga karya Masashi Kishimoto yang diadaptasi menjadi serial anime.
+             Manga Naruto bercerita seputar kehidupan tokoh utamanya, Naruto Uzumaki, seorang ninja yang hiperaktif, periang, dan ambisius yang ingin mewujudkan keinginannya untuk mendapatkan gelar Hokage, pemimpin dan ninja terkuat di desanya. 
+            </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="juki" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Si Juki : Seri Keroyokan</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex">
+            <img class="card-img-bottom img-fluid" style="width: 15rem;" src="{{asset('juki.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+            <p class="card-text p-2 g-col-6">
+            Si Juki seri Keroyokan adalah kompilasi komik dari Pionicon.
+            Mereka yang menyambut undangan Juki untuk bergabung meliputi Congky, Juleha, Qdjy, Vusya, Hebring, Si Bedil, Raisah, Pavlichenko, Manka dan Zombie Ngehe. Kehadiran para karakter komik dalam seri Keroyokan ini diharap bisa melejitkan popularitas mereka bersama si Juki.
+            </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="jujutsu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Jujutsu Kaisen VOL 2</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex">
+            <img class="card-img-bottom img-fluid" style="width: 15rem;" src="{{asset('jujutsu.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+            <p class="card-text p-2 g-col-6">
+            Komik Jujutsu Kaisen 2 karya Gege Akutami menjadi salah satu komik yang wajib untuk diikuti. Sebuah kutukan yang menyerupai janin tiba-tiba muncul di lapas anak pria.
+            Itadori dan murid tahun pertama lainnya diutus untuk menyelamatkan orang-orang yang masih berada di lapas tersebut.
+            Yuk, mulai ikuti dan simak serial komik ini dengan konsep pertarungan unik dan epik.
+            </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="tokyo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Tokyo Revengers Vol 2</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex">
+            <img class="card-img-bottom img-fluid" style="width: 15rem;" src="{{asset('tokyo.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+            <p class="card-text p-2 g-col-6">
+            Takemichi, pria tidak berguna mantan berandalan, melintasi waktu ke masa SMP dua belas tahun lalu demi menyelamatkan mantan pacarnya yang amat disayanginya, Hinata. 
+            Hinata tewas dibunuh Geng Tokyo Manji yang keji! Takemichi yang menarik perhatian ketuanya, Mikey, lantas bergabung dengan Toman.
+            Saat kembali ke masa kini, sahabat lamanya yaitu Akkun, ternyata telah menjadi petinggi Toman.
+            </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="hero" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Boku No Hero</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex">
+            <img class="card-img-bottom img-fluid" style="width: 15rem;" src="{{asset('hero.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+            <p class="card-text p-2 g-col-6">
+            Cerita My Hero Academia berkisah tentang Izuku Midoriya, siswa yang memiliki mimpi untuk menjadi pahlawan namun ia tidak memiliki kekuatan seperti yang lain. 
+            Ia kemudian bertemu dengan pahlawan terkenal, All Might, yang akhirnya membuat dia mewarisi kekuatan super All Might.
+            </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+          <!-- Modal -->
+          <div class="modal fade" id="haikyu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Haikyu</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex">
+            <img class="card-img-bottom img-fluid" style="width: 15rem;" src="{{asset('haikyu.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+            <p class="card-text p-2 g-col-6">
+            Seorang siswa SMA bernama Shōyō Hinata, menjadi terobsesi dengan bola voli setelah menyaksikan SMA Karasuno memenangkan pertandingan mereka untuk lolos ke Kejuaraan Nasional di TV.
+             Meskipun memiliki tubuh yang pendek, Hinata terinspirasi oleh seorang pemain yang dijuluki "Raksasa Kecil", 
+            </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+          <!-- Modal -->
+          <div class="modal fade" id="conan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Detektif Conan</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex">
+            <img class="card-img-bottom img-fluid" style="width: 15rem;" src="{{asset('conan.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+            <p class="card-text p-2 g-col-6">
+            Ada guru bahasa Inggris dari luar negeri datang ke SMA Teitan, Bu Jody Santemillion.
+             Sepintas dia adalah guru yang lembut, tetapi ada sesuatu di balik topengnya! Berdasarkan surat yang ditujukan pada Heiji, Conan dkk berangkat menuju pulau tempat tinggal putri duyung.
+            </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+          <!-- Modal -->
+          <div class="modal fade" id="boruto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Boruto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex">
+            <img class="card-img-bottom img-fluid" style="width: 15rem;" src="{{asset('boruto.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+            <p class="card-text p-2 g-col-6">
+            Boruto: Naruto Next Generations adalah sebuah seri manga Jepang yang ditulis oleh Ukyō Kodachi dan Masashi Kishimoto dan diilustrasikan oleh Mikio Ikemoto. 
+            Seri manga ini mulai diserialisasikan dalam majalah manga shōnen Shueisha, Weekly Shōnen Jump, pada Mei 2016 dan dipindahkan ke majalah bulanan Shueisha, V Jump, pada Juli 2019. 
+            
+            </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+          <!-- Modal -->
+          <div class="modal fade" id="aot" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Attack On Titan</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex">
+            <img class="card-img-bottom img-fluid" style="width: 15rem;" src="{{asset('aot.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+            <p class="card-text p-2 g-col-6">
+            Segerombolan Titan mendadak muncul di dekat Wall Rose. Pasukan penyelidik termasuk semua Prajurit ke-104 bergegas ke tempat kemunculan Titan dan bermalam di Kastil Utgard. 
+            Tapi, Titan yang seharusnya tidak bisa bergerak saat malam hari, tiba-tiba mengepung kastil tersebut! Apa para prajurit bisa bertahan dari serangan para Titan!?
+            </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+          <!-- Modal -->
+          <div class="modal fade" id="blue" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Blue Lock</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex">
+            <img class="card-img-bottom img-fluid" style="width: 15rem;" src="{{asset('blue.jpg')}}" alt="Card image cap" style="height: 20rem; object-fit:cover;">
+            <p class="card-text p-2 g-col-6">
+            Komik “Blue Lock 6” merupakan komik dalam seri Blue Lock.
+             Di mana cerita dalam komik ini bermula dari tersingkirnya Jepang dari Piala Dunia FIFA 2018, yang mendorong Persatuan Sepak Bola Jepang untuk memulai sebuah program mencari pemain sekolah menengah yang akan memulai pelatihan untuk persiapan Piala 2022.
+             Isagi Yoichi, seorang penyerang, menerima undangan ke program ini.
+            </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
     </div>
     <script src="{{ asset('dist/assets/static/js/components/dark.js') }}"></script>
     <script src="{{ asset('dist/assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
