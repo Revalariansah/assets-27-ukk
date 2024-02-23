@@ -74,7 +74,7 @@
                             <ul class="submenu ">
 
                                 <li class="submenu-item  ">
-                                    <a href="component-accordion.html" class="submenu-link">Peminjam</a>
+                                    <a href="/login/dashboard/peminjam" class="submenu-link">Peminjam</a>
 
                                 </li>
 
@@ -84,7 +84,7 @@
                                 </li>
 
                                 <li class="submenu-item  ">
-                                    <a href="/login/dashboard/kategori_buku" class="submenu-link">Kategori Buku</a>
+                                    <a href="/login/dashboard/kategori_buku" class="submenu-link">Buku</a>
 
                                 </li>
                             </ul>

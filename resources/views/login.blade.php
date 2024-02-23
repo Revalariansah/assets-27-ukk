@@ -22,10 +22,12 @@
             <div class="card-body" style="background-color: #fffffffb;">
                 <form>
                     <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                             placeholder="Email">
                     </div>
                     <div class="mb-3">
+                    <label for="email" class="form-label">Password</label>
                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                     </div>
                     <div class="d-flex justify-content-center mb-3">

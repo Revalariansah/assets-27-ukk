@@ -21,7 +21,7 @@
             </form>
         </div>
     </nav>
-    <div class="center-text" style="text-align: center;>
+    <div class="center-text" style="text-align: center;">
         <div class="card mb-3">
 
         <img src="{{ asset('buku.jpg') }}" class="card-img-top" alt="...">

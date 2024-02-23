@@ -12,8 +12,8 @@
                 <a class="navbar-brand">User</a>
             </div>
             </nav>
-        <table class="table mt-3" >
-        <div class="mt-3 ms-3">
+        <table class="table mt-2" >
+        <div class="mt-2 ms-3">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Tambah
             </button>
@@ -83,7 +83,6 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Tambah</button>
                 </div>
                 </div>
