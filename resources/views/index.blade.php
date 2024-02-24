@@ -57,7 +57,7 @@
                             </svg>
                         </div>
                         <div class="sidebar-toggler  x">
-                            <a href="#" class="sidebar-hide d-xl-none d-block"><i
+                            <a href="#" class="sidebar-hide     d-xl-none d-block"><i
                                     class="bi bi-x bi-middle"></i></a>
                         </div>
                     </div>
@@ -89,6 +89,13 @@
                                 </li>
                             </ul>
                         </li>
+                        
+                            <a href="/" class='sidebar-link'>
+                                    <i class="bi bi-box-arrow-left"></i>
+                                    <span>Logout</span>
+                            </a>
+                        
+
                     </ul>
                 </div>
             </div>

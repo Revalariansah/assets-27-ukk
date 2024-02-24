@@ -13,18 +13,14 @@
             </div>
             </nav>
         <table class="table mt-2" >
-        <div class="mt-2 ms-3">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Tambah
-            </button>
-        </div>
         <thead>
             <tr>
             <th scope="col">No</th>
             <th scope="col">Nama</th>
-            <th scope="col">No Telepon</th>
+            <th scope="col">Jenis Kelamin</th>          
             <th scope="col">Email</th>
             <th scope="col">Alamat</th>
+            <th scope="col">No Telepon</th>
             <th scope="col">Aksi</th>
             </tr>
         </thead>
@@ -32,11 +28,12 @@
         <div class="dropdown ">
             <tr>
             <th scope="row">1</th>
-            <td>hakiem</td>
-            <td>0857011139876</td>
+            <td>Hakiem</td>          
+            <td>Laki-Laki</td>          
             <td>hakiem123@gmail.com</td>
-            <td>Rajeg nih</td>
-             <td>  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <td>Rajeg</td>
+            <td>0857011139876</td>
+            <td>  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
             <button type="button" class="btn btn-danger">Hapus</button>
             <button type="button" class="btn btn-warning">Edit</button>
             </div>
@@ -45,17 +42,23 @@
             </tr>
             <tr>
             <th scope="row">2</th>
-            <td>Joe</td>
-            <td>085718467654</td>
+            <td>Joe</td>           
+            <td>Laki-Laki</td>           
             <td>Joe123@gmail.com</td>
             <td>Kebon Besar nih</td>
+            <td>085718467654</td>
              <td> <div class="btn-group" role="group" aria-label="Basic mixed styles example">
             <button type="button" class="btn btn-danger">Hapus</button>
             <button type="button" class="btn btn-warning">Edit</button>
             </div>
-        </div>
+              </div>
             </td>
             </tr>
+            <div class="mt-2 ms-3">
+             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Tambah
+            </button>
+      
         </tbody>
            <!-- Modal -->
            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -69,6 +72,16 @@
                 <div class="mb-3">
                     <label for="Name" class="form-label">Nama</label>
                     <input type="text" name="name" class="form-control" id="Name" placeholder="Masukkan Nama">
+                    </div>
+                    <div class="form-check">
+                    <label class="Name" class="form-label">No Telepon</label>
+                        <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked"required>
+                        <label class="form-check-label" for="validationFormCheck2">Laki-Laki</label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+                        <label class="form-check-label" for="validationFormCheck3">Perempuan</label>
+                        <div class="invalid-feedback">More example invalid feedback text</div>
                     </div>
                 <div class="mb-3">
                     <label for="Name" class="form-label">No Telepon</label>
