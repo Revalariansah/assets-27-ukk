@@ -18,17 +18,12 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'type'
+    protected $guarded = [
+        'id',
     ];
  
-    protected function type(): Attribute
+    public function products()
     {
-        return new Attribute(
-            get: fn ($value) =>  ["user", "admin"][$value],
-        );
+        return $this->hasMany(Product::class);
     }
 }

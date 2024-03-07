@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
- 
+
+use App\Models\Kategori;
 use Illuminate\Http\Request;
 use App\Models\Product;
  
@@ -11,7 +12,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $product = Product::orderBy('created_at', 'DESC')->get();
+        $product = Product::with('kategori')
+            ->orderBy('created_at', 'DESC')
+            ->get();
  
         return view('products.index', compact('product'));
     }
@@ -21,7 +24,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        $kategori = Kategori::all();
+        return view('products.create', compact('kategori'));
     }
  
     /**
@@ -29,6 +33,10 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        if($request->image) {
+            $fileName = time() . '.' . $request->image->extension();
+             $request->image->storeAs('public/products', $fileName);
+        }
         Product::create($request->all());
  
         return redirect()->route('admin/products')->with('success', 'Product added successfully');
@@ -50,8 +58,8 @@ class ProductController extends Controller
     public function edit(string $id)
     {
         $product = Product::findOrFail($id);
- 
-        return view('products.edit', compact('product'));
+        $kategori = Kategori::all(); 
+        return view('products.edit', compact('product', 'kategori'));
     }
  
     /**
@@ -60,7 +68,12 @@ class ProductController extends Controller
     public function update(Request $request, string $id)
     {
         $product = Product::findOrFail($id);
- 
+
+        if($request->image) {
+            $fileName = time() . '.' . $request->image->extension();
+             $request->image->storeAs('public/products', $fileName);
+        }
+
         $product->update($request->all());
  
         return redirect()->route('admin/products')->with('success', 'product updated successfully');

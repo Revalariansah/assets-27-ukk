@@ -9,10 +9,14 @@ class Product extends Model
 {
     use HasFactory;
  
-    protected $fillable = [
-        'title',
-        'price',
-        'product_code',
-        'description'
-    ];
+    protected $guarded = ['id'];
+
+    public function kategori()
+    {
+        return $this->belongsTo(Kategori::class);
+    }
+    public function peminjam()
+    {
+        return $this->hasMany(Peminjam::class);
+    }
 }

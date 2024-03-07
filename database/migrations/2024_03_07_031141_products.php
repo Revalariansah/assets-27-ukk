@@ -17,6 +17,10 @@ return new class extends Migration
             $table->string('price');
             $table->string('product_code');
             $table->text('description');
+            $table->foreignId('kategori_id')
+                ->constrained()
+                ->onDelete('cascade');
+            $table->string('image');
             $table->timestamps();
         });
     }

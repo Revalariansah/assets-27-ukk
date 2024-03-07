@@ -1,85 +1,76 @@
 <?php
- 
+
 namespace App\Http\Controllers;
- 
-use Illuminate\Http\Request;
+
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\ValidationException;
- 
+
 class AuthController extends Controller
 {
- 
-    public function __construct()
+    public function login ()
     {
-        $this->middleware('guest')->except('logout');
+        return view('auth.login');
     }
- 
+
+    public function dologin(Request $request)
+    {
+        $request ->validate([
+            'email' => 'required',
+            'password' => 'required',
+        ], [
+            'email.required' => 'Email wajib diisi setelah sholat',
+            'password.required' => 'Password wajib diisi setelah sholat',
+        ]);
+
+        $infologin = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+
+        if(Auth::attempt($infologin)){
+            if (Auth::user()->role === 'admin') {
+                return redirect('admin/home');
+            }else if (Auth::user()->role == 'petugas') {
+                return redirect('dashboard');
+            }else if (Auth::user()->role == 'user') {
+                return redirect('');
+            } else {
+                return redirect("login");
+            }
+        }else{
+            return redirect("login");
+        }
+    }
+
     public function register()
     {
-        return view('auth/register');
+        return view('auth.register');
     }
- 
-    public function registerSave(Request $request)
+    public function doregister(Request $request)
     {
-        Validator::make($request->all(), [
-            'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required|confirmed'
-        ])->validate();
- 
-        User::create([
+        $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'type' => "0"
+            'password_confirmation' => Hash::make($request->password),
         ]);
- 
-        return redirect()->route('login');
-    }
- 
-    public function login()
-    {
-        return view('auth/login');
-    }
- 
-    public function loginAction(Request $request)
-    {
-        Validator::make($request->all(), [
-            'email' => 'required|email',
-            'password' => 'required'
-        ])->validate();
- 
-        if (!Auth::attempt($request->only('email', 'password'), $request->boolean('remember'))) {
-            throw ValidationException::withMessages([
-                'email' => trans('auth.failed')
-            ]);
-        }
- 
-        $request->session()->regenerate();
- 
-        if (auth()->user()->type == 'admin') {
-            return redirect()->route('admin/home');
+        if ($user) {
+            return redirect("");
         } else {
-            return redirect()->route('home');
+            return redirect("register")->withErrors('Inputan salah')->withInput();
         }
-         
-        return redirect()->route('dashboard');
     }
- 
-    public function logout(Request $request)
+
+    public function forgot()
     {
-        Auth::guard('web')->logout();
- 
-        $request->session()->invalidate();
- 
-        return redirect('/login');
+        return view('forgot');
     }
- 
-    public function profile()
+
+    public function logout()
     {
-        return view('userprofile');
+        Auth::logout();
+        return redirect('/');
     }
 }

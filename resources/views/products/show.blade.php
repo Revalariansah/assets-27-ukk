@@ -8,26 +8,26 @@
 <div class="border-b border-gray-900/10 pb-12">
     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
         <div class="sm:col-span-4">
-            <label class="block text-sm font-medium leading-6 text-gray-900">Title</label>
+            <label class="block text-sm font-medium leading-6 text-gray-900">Judul</label>
             <div class="mt-2">
                 {{ $product->title }}
             </div>
         </div>
  
         <div class="sm:col-span-4">
-            <label class="block text-sm font-medium leading-6 text-gray-900">Price</label>
+            <label class="block text-sm font-medium leading-6 text-gray-900">Penulis</label>
             <div class="mt-2">
                 {{ $product->price }}
             </div>
         </div>
         <div class="sm:col-span-4">
-            <label class="block text-sm font-medium leading-6 text-gray-900">Product Code</label>
+            <label class="block text-sm font-medium leading-6 text-gray-900">Penerbit</label>
             <div class="mt-2">
                 {{ $product->product_code }}
             </div>
         </div>
         <div class="sm:col-span-4">
-            <label class="block text-sm font-medium leading-6 text-gray-900">Description</label>
+            <label class="block text-sm font-medium leading-6 text-gray-900">Tahun Terbit</label>
             <div class="mt-2">
                 {{ $product->description }}
             </div>

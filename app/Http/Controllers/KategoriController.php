@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class KategoriController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $user = User::all();
-        return view('user.index',compact('user'));
+        $kategori = Kategori::all();
+        return view('kategori.index',compact('kategori'));
     }
 
     /**
@@ -21,7 +21,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('user.create');
+        return view('kategori.create');
     }
 
     /**
@@ -30,13 +30,13 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama_user' => 'required',
+            'nama_kategori' => 'required',
         ]);
         $data = [
-            'nama_user' => $request->nama_user
+            'nama_kategori' => $request->nama_kategori
         ];
-        User::create($data);
-        return redirect('user')->with('success','User Berhasil Ditambahkan');
+        Kategori::create($data);
+        return redirect('kategori')->with('success','Kategori Berhasil Dibuat');
     }
 
     /**
@@ -44,9 +44,7 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        $user = User::findOrFail($id);
- 
-        return view('user.show', compact('user'));
+        //
     }
 
     /**
@@ -54,8 +52,8 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        $data = User::find($id);
-        return view('user.edit',compact('data'));
+        $data = Kategori::find($id);
+        return view('kategori.edit',compact('data'));
     }
 
     /**
@@ -64,13 +62,13 @@ class UserController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'nama_user' => 'required',
+            'nama_kategori' => 'required',
         ]);
         $data = [
-            'nama_user' => $request->nama_user
+            'nama_kategori' => $request->nama_kategori
         ];
-        User::where('id',$id)->update($data);
-        return redirect('user')->with('success','User Berhasil Diupdate');
+        Kategori::where('id',$id)->update($data);
+        return redirect('kategori')->with('success','Kategori Berhasil Diupdate');
     }
 
     /**
@@ -78,7 +76,7 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        User::destroy($id);
-        return redirect('user')->with('success','User Berhasil Dihapus');
+        Kategori::destroy($id);
+        return redirect('kategori')->with('success','Kategori Berhasil Dihapus');
     }
 }

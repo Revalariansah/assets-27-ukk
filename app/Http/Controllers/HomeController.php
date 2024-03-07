@@ -20,4 +20,9 @@ class HomeController extends Controller
     {
         return view('dashboard');
     }
+
+    public function beranda()
+    {
+        return view('beranda');
+    }
 }

@@ -18,9 +18,9 @@ class UserAccess
     //    return $next($request);
    // }
  
-    public function handle(Request $request, Closure $next, $userType)
+    public function handle(Request $request, Closure $next, ...  $role)
     {
-        if (auth()->user()->type == $userType) {
+        if (auth()->user()->role == $role) {
             return $next($request);
         }
  

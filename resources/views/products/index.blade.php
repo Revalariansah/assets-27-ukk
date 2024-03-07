@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Home Product List')
+@section('title', 'Buku')
 
 @section('contents')
 <div>
-    <h1 class="font-bold text-2xl ml-3">Home Product List</h1>
-    <a href="{{ route('admin/products/create') }}" class="text-white float-right bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Add Product</a>
+    <h1 class="font-bold text-2xl ml-3">Data Buku</h1>
+    <a href="{{ route('admin/products/create') }}" class="text-white float-right bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Tambah Buku</a>
 
     @if(Session::has('success'))
     <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
@@ -17,11 +17,13 @@
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                     <th scope="col" class="px-6 py-3">ID</th>
+                    <th scope="col" class="px-6 py-3">Gambar</th>
                     <th scope="col" class="px-6 py-3">Judul</th>
                     <th scope="col" class="px-6 py-3">Penulis</th>
                     <th scope="col" class="px-6 py-3">Penerbit</th>
                     <th scope="col" class="px-6 py-3">Tahun Terbit</th>
-                    <th scope="col" class="px-6 py-3">Action</th>
+                    <th scope="col" class="px-6 py-3">Kategori</th>
+                    <th scope="col" class="px-6 py-3">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +33,13 @@
                     <th scope="row" class="font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         {{ $loop->iteration }}
                     </th>
+                    <td>
+                        @if($rs->image)
+                        <img src="{{ asset('storage/products/'.$rs->image) }}" style="height: 150px;width:100px;">
+                        @else
+                        <span>No image found!</span>
+                        @endif
+                    </td>
                     <td>
                         {{ $rs->title }}
                     </td>
@@ -42,6 +51,9 @@
                     </td>
                     <td>
                         {{ $rs->description }}
+                    </td>
+                    <td>
+                        {{ $rs->kategori->nama_kategori }}
                     </td>
                     <td class="w-36">
                         <div class="h-14 pt-5">
@@ -58,7 +70,7 @@
                 @endforeach
                 @else
                 <tr>
-                    <td class="text-center" colspan="5">Product not found</td>
+                    <td class="text-center" colspan="5">Buku not found</td>
                 </tr>
                 @endif
             </tbody>
