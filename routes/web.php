@@ -52,13 +52,14 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin/home');
     Route::get('/admin/profile', [AdminController::class, 'profilepage'])->name('admin/profile');
-    Route::get('/admin/products', [ProductController::class, 'index'])->name('admin/products');
-    Route::get('/admin/products/create', [ProductController::class, 'create'])->name('admin/products/create');
-    Route::post('/admin/products/store', [ProductController::class, 'store'])->name('admin/products/store');
-    Route::get('/admin/products/show/{id}', [ProductController::class, 'show'])->name('admin/products/show');
-    Route::get('/admin/products/edit/{id}', [ProductController::class, 'edit'])->name('admin/products/edit');
-    Route::put('/admin/products/edit/{id}', [ProductController::class, 'update'])->name('admin/products/update');
-    Route::delete('/admin/products/destroy/{id}', [ProductController::class, 'destroy'])->name('admin/products/destroy');
+    Route::resource('product', ProductController::class);
+    // Route::get('/products', [ProductController::class, 'index'])->name('products');
+    // Route::get('/products/create', [ProductController::class, 'create'])->name('products/create');
+    // Route::post('/products/store', [ProductController::class, 'store'])->name('products/store');
+    // Route::get('/products/show/{id}', [ProductController::class, 'show'])->name('products/show');
+    // Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->name('products/edit');
+    // Route::put('/products/edit/{id}', [ProductController::class, 'update'])->name('products/update');
+    // Route::delete('/products/destroy/{id}', [ProductController::class, 'destroy'])->name('products/destroy');
     Route::resource('kategori',KategoriController::class);
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
     Route::resource('user', UserController::class);

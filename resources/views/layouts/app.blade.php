@@ -62,7 +62,7 @@
                         <span class="text-[15px] ml-4 text-gray-200 font-bold">Home</span>
                     </div>
                 </a>
-                <a href="{{ route('admin/products') }}">
+                <a href="{{ route('product.index') }}">
                     <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
                     <i class="bi bi-book"></i>
                         <span class="text-[15px] ml-4 text-gray-200 font-bold">Buku</span>
@@ -70,20 +70,14 @@
                 </a>
                 <a href="{{ route('kategori.index') }}">
                     <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
-                    <i class="bi bi-book"></i>
+                    <i class="bi bi-bookmark-check"></i>
                         <span class="text-[15px] ml-4 text-gray-200 font-bold">Kategori</span>
                     </div>
                 </a>
                 <a href="{{ route('user.index') }}">
                     <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
-                    <i class="bi bi-book"></i>
+                    <i class="bi bi-person-badge"></i>
                         <span class="text-[15px] ml-4 text-gray-200 font-bold">User</span>
-                    </div>
-                </a>
-                <a href="{{ url('peminjam') }}">
-                    <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
-                    <i class="bi bi-book"></i>
-                        <span class="text-[15px] ml-4 text-gray-200 font-bold">Peminjaman</span>
                     </div>
                 </a>
                 <a href="{{ route('admin/profile') }}">
